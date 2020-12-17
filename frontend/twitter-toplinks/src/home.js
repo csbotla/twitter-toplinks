@@ -15,7 +15,7 @@ function Home() {
   // const [username, setUsername] = useState("");
 
   useEffect(() => {
-    fetch(process.env.BACKEND_URL + "/auth/login/success", {
+    fetch("/auth/login/success", {
       method: "GET",
       credentials: "include",
       headers: {

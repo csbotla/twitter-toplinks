@@ -3,11 +3,11 @@ import React from "react";
 export default function Header({ authenticated, img_url }) {
   // const [authenticated, setAuthenticated] = useState(false);
   const handleSignInClick = () => {
-    window.open("/auth/twitter", "_self");
+    window.open(process.env.BACKEND_URL+ "auth/twitter", "_self");
   };
 
   const handleLogoutClick = () => {
-    window.open(process.env.BACKEND_URL + "/logout", "_self");
+    window.open(process.env.BACKEND_URL + "logout", "_self");
     // handleNotAuthenticated();
   };
   return (
