@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 20px;
+  color: darkslateblue;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.welcome-container {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-msg {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.header {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  /* border: 2px solid #000; */
+  background-color: darkslateblue;
+  color: #ffffff;
+}
+
+/* .header ul{ */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header ul li {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 5px 10px;
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+  background-color: darkgrey;
+  border-radius: 5px;
+  color: rgb(20, 20, 20);
+  transition: all 0.5s ease-in-out;
+}
+
+.header ul li:hover {
+  color: rgb(37, 37, 37);
+  background-color: lightgray;
+}
+
+.main {
+  height: 300px;
+  width: 600px;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.loginbtn {
+  text-decoration: none;
+  padding: 12px;
+  background-color: rgb(96, 87, 156);
+  color: #ffffff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.loginbtn:hover {
+  background-color: darkslateblue;
+  color: #ffffff;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tweetslist {
+  width: 450px;
+  height: 500px;
+  border: 1px solid darkslateblue;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: scroll;
+}
+
+.listofpopulardomains,
+.mostsharedlinks {
+  width: 400px;
+  height: 500px;
+  border: 1px solid darkslateblue;
+  border-radius: 10px;
+}
+
+.heading {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  width: 100%;
+  height: 70px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: darkslateblue;
+  color: #ffffff;
+}
+
+.tweets-container {
+  height: 500px;
+  width: 500px;
+  margin-bottom: 50px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweets-container::-webkit-scrollbar,
+.listofmostpopulardomains-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.tweet {
+  border-bottom: 2px solid #ddd;
+  /* border-radius: 10px; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet img {
+  display: inline;
+  height: 48px;
+  width: 48px;
+  margin-right: 10px;
+}
+
+.img-container {
+  flex: 0.4;
+}
+
+.containers {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.containers-borders {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.listofmostpopulardomains-container {
+  height: 400px;
+  width: 400px;
+  border: 2px solid #ddd;
+  margin-bottom: 50px;
+  overflow-y: scroll;
+}
+
+.mostpopulardomain-container {
+  height: 200px;
+  width: 400px;
+  border: 2px solid #ddd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mostpopulardomain-container .id {
+  flex: 0.4;
+  font-size: 30px;
+}
+
+.mostpopulardomain-container .count {
+  font-size: 80px;
+}
+
+.domains {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+}

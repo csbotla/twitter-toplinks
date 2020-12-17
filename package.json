@@ -1,0 +1,31 @@
+{
+  "name": "vouch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install":"npm install --prefix frontend/twitter-toplinks",
+    "start":"node index.js",
+    "server":"nodermon index.js",
+    "client":"npm start --prefix frontend/twitter-toplinks",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/twitter-toplinks && npm run build --prefix frontend/twitter-toplinks"
+  },
+  "author": "Chandra Shekhar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.7",
+    "needle": "^2.5.2",
+    "nodemon": "^2.0.6",
+    "oauth": "^0.9.15",
+    "oauth-1.0a": "^2.2.6",
+    "passport": "^0.4.1",
+    "passport-twitter": "^1.0.4"
+  }
+}
