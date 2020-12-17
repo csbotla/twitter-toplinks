@@ -6,7 +6,7 @@
   "scripts": {
     "client-install":"npm install --prefix frontend/twitter-toplinks",
     "start":"node index.js",
-    "server":"nodermon index.js",
+    "server":"nodemon index.js",
     "client":"npm start --prefix frontend/twitter-toplinks",
     "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/twitter-toplinks && npm run build --prefix frontend/twitter-toplinks"
   },
