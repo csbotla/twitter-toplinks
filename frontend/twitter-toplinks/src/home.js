@@ -54,17 +54,23 @@ function Home() {
       });
   }, []);
 
+  const handleSignInClick = () => {
+    window.open("/auth/twitter", "_self");
+  };
+
   return (
     <div className="home1">
-      <Header
-        authenticated={user.authenticated}
-        img_url={user.img_url}
-        handleNotAuthenticated={handleNotAuthenticated}
-      />
       <div>
         {!user.authenticated ? (
           <div className="welcome-container">
-            <h1>Welcome!</h1>
+            <div className="welcome-box">
+              <div className="side1">Twitter toplinks</div>
+              <div className="side2">
+                <button className="signin" onClick={handleSignInClick}>
+                  Sign-In with Twitter
+                </button>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="welcome-container">
@@ -76,6 +82,11 @@ function Home() {
       </div>
       {user.authenticated ? (
         <div className="">
+          <Header
+            authenticated={user.authenticated}
+            img_url={user.img_url}
+            handleNotAuthenticated={handleNotAuthenticated}
+          />
           <TweetsContainer />
         </div>
       ) : null}

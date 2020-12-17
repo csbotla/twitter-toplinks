@@ -24,12 +24,82 @@ code {
 }
 
 .welcome-container {
-  height: 50px;
+  height: 100vh;
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1D1939;
 }
+
+.welcome-box {
+  height: 500px;
+  width: 600px;
+  border: 5px solid #F4E8C1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+.side1 {
+  flex: 0.6;
+}
+
+.side2 {
+  flex: 0.4;
+}
+
+.side1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 100%;
+  background-color: #F4E8C1;
+  color: #1D1939;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.side2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: darkslateblue;
+  background-color: #edd997;
+  /* border-radius: 10px; */
+}
+
+.signin{
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #1D1939;
+  padding: 10px 15px;
+  color: #F4E8C1;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.signin:hover{
+  background-color: #edd997;
+  color: #1D1939;
+  border-radius: 0;
+  border-bottom: 3px #1D1939 solid;
+}
+
+
 
 .welcome-msg {
   font-weight: 500;
@@ -41,16 +111,17 @@ img {
 }
 
 .header {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 10px;
   font-size: 25px;
   font-weight: bolder;
-  padding: 10px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   vertical-align: middle;
-  /* border: 2px solid #000; */
-  background-color: darkslateblue;
+  /* border: 2px solid #1D1939; */
+  background-color: #1D1939;
   color: #ffffff;
 }
 
@@ -65,19 +136,19 @@ img {
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: 600;
-  padding: 5px 10px;
+  padding-bottom: 10px;
   display: inline;
   list-style: none;
   cursor: pointer;
-  background-color: darkgrey;
-  border-radius: 5px;
-  color: rgb(20, 20, 20);
+  /* background-color: #F4E8C1; */
+  color: #F4E8C1;
+  border-bottom: 2px solid #1D1939;
   transition: all 0.5s ease-in-out;
 }
 
 .header ul li:hover {
-  color: rgb(37, 37, 37);
-  background-color: lightgray;
+  color: #edd997;
+  border-bottom: 2px solid #edd997;
 }
 
 .main {
@@ -110,6 +181,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #F4E8C1;
 }
 
 .tweetslist {
@@ -139,7 +211,7 @@ img {
   height: 70px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: darkslateblue;
+  background-color: #1D1939;
   color: #ffffff;
 }
 
