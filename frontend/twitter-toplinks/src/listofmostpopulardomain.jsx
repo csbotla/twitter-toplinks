@@ -5,7 +5,7 @@ function ListofMostpopulardomain({ load }) {
 
   useEffect(() => {
     setListofdomains([]);
-    fetch(process.env.BACKEND_URL+"listofpopulardomains", {
+    fetch("/listofpopulardomains", {
       method: "GET",
       credentials: "include",
       headers: {
