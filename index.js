@@ -5,7 +5,6 @@ const app = express();
 const passport = require("passport");
 const mongoose = require("mongoose");
 const crypto = require("crypto");
-const auth = require("./routes/auth");
 const { access } = require("fs");
 const OAuth = require("oauth");
 const { promisify } = require("util");
