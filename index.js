@@ -288,8 +288,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(
       path.resolve(
         __dirname,
-        "frontend",
-        "twitter-toplinks",
+        "frontend/twitter-toplinks",
         "build",
         "index.html"
       )
