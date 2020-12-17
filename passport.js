@@ -1,6 +1,7 @@
 const TwitterStrategy = require("passport-twitter").Strategy;
 
 const User = require("./models/User");
+const dotenv = require("dotenv").config();
 
 module.exports = function (passport) {
   passport.serializeUser((user, done) => {
@@ -16,9 +17,9 @@ module.exports = function (passport) {
   passport.use(
     new TwitterStrategy(
       {
-        consumerKey: "kVN7V0GSIsb9UVsekyDwgOqXc",
-        consumerSecret: "FZfovqvQS1LkNoIuuSgJJZYThp1Lwil8AYVkXMk7AS2aR4RdHm",
-        callbackURL: "https://intense-tor-92849.herokuapp.com/auth/twitter/callback",
+        consumerKey: process.env.CONSUMER_KEY,
+        consumerSecret: process.env.CONSUMER_SECRET,
+        callbackURL: process.env.CLIENT_URL + "/auth/twitter/callback",
       },
       function (token, tokenSecret, profile, cb) {
         console.log("pp authcte");
