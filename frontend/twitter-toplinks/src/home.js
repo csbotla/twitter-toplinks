@@ -73,11 +73,7 @@ function Home() {
             </div>
           </div>
         ) : (
-          <div className="welcome-container">
-            <div className="welcome-msg">
-              Welcome <b>{user.userInfo.displayName}!</b>
-            </div>
-          </div>
+          <div></div>
         )}
       </div>
       {user.authenticated ? (
@@ -87,6 +83,9 @@ function Home() {
             img_url={user.img_url}
             handleNotAuthenticated={handleNotAuthenticated}
           />
+          <div className="welcome-msg">
+            Welcome <b>{user.userInfo.displayName}!</b>
+          </div>
           <TweetsContainer />
         </div>
       ) : null}
