@@ -15,7 +15,7 @@ const User = require("./models/User");
 const tweet = require("./models/tweet");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const path = require('path')
+const path = require("path");
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -280,14 +280,21 @@ async function getTwitterUserProfileWithOAuth1(username) {
   return JSON.parse(body);
 }
 
-
-if(process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === "production") {
   //set static folder
 
-  app.use(express.static('frontend/twitter-toplinks/build'))
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'frontend/twitter-toplinks','build','index.html'))
-  })
+  app.use(express.static("frontend/twitter-toplinks/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(
+      path.resolve(
+        __dirname,
+        "frontend",
+        "twitter-toplinks",
+        "build",
+        "index.html"
+      )
+    );
+  });
 }
 
 app.listen(port, () => {
