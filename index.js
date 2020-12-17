@@ -65,17 +65,17 @@ const isLoggedIn = (req, res, next) => {
   }
 };
 
-app.get("/", isLoggedIn, (req, res) => {
-  // res.send(
-  //   `<h1><a href="http://localhost:3000/auth/twitter">Twitter Top Links Login</a></h1><hr>`
-  // );
-  console.log("/");
-  res.status(200).json({
-    authenticated: true,
-    message: "successful login",
-    user: req.user,
-  });
-});
+// app.get("/", isLoggedIn, (req, res) => {
+//   // res.send(
+//   //   `<h1><a href="http://localhost:3000/auth/twitter">Twitter Top Links Login</a></h1><hr>`
+//   // );
+//   console.log("/");
+//   res.status(200).json({
+//     authenticated: true,
+//     message: "successful login",
+//     user: req.user,
+//   });
+// });
 
 // -------------LOGIN-------------------------
 

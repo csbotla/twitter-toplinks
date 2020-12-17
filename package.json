@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-install":"npm install --prefix frontend/twitter-toplinks",
-    "start":"node index.js",
-    "server":"nodemon index.js",
-    "client":"npm start --prefix frontend/twitter-toplinks",
-    "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/twitter-toplinks && npm run build --prefix frontend/twitter-toplinks"
+    "client-install": "npm install --prefix frontend/twitter-toplinks",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix frontend/twitter-toplinks",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/twitter-toplinks && npm run build --prefix frontend/twitter-toplinks"
   },
   "author": "Chandra Shekhar",
   "license": "ISC",
@@ -28,5 +28,8 @@
     "oauth-1.0a": "^2.2.6",
     "passport": "^0.4.1",
     "passport-twitter": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
