@@ -182,7 +182,7 @@ app.get(
 
 app.get("/logout", function (req, res) {
   req.session.destroy(function (err) {
-    res.redirect(procees.env.CLIENT_URL); //Inside a callback… bulletproof!
+    res.redirect(process.env.CLIENT_URL); //Inside a callback… bulletproof!
   });
 });
 
