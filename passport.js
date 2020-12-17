@@ -18,7 +18,7 @@ module.exports = function (passport) {
       {
         consumerKey: "kVN7V0GSIsb9UVsekyDwgOqXc",
         consumerSecret: "FZfovqvQS1LkNoIuuSgJJZYThp1Lwil8AYVkXMk7AS2aR4RdHm",
-        callbackURL: "http://localhost:3000/auth/twitter/callback",
+        callbackURL: "https://intense-tor-92849.herokuapp.com/auth/twitter/callback",
       },
       function (token, tokenSecret, profile, cb) {
         console.log("pp authcte");
