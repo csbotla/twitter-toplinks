@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Mostpopulardomain({ load }) {
   const [mostpopulardomain, setmostpopulardomain] = useState({});
   useEffect(() => {
-    fetch("http://localhost:3000/mostpopulardomain", {
+    fetch(process.env.BACKEND_URL+"/mostpopulardomain", {
       method: "GET",
       credentials: "include",
       headers: {

@@ -18,7 +18,7 @@ function TweetsContainer() {
     //     "Access-Control-Allow-Credentials": true,
     //   },
     // }).then(
-    fetch("http://localhost:3000/tweetswithurl", {
+    fetch(process.env.BACKEND_URL + "/tweetswithurl", {
       method: "GET",
       credentials: "include",
       headers: {
