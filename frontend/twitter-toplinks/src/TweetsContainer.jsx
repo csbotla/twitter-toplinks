@@ -5,7 +5,6 @@ import Tweet from "./Tweet";
 
 function TweetsContainer() {
   const [tweets, setTweets] = useState([]);
-  const [isLoad, setIsLoad] = useState(1);
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
@@ -66,13 +65,6 @@ function TweetsContainer() {
       });
     // );
   }, []);
-
-  const refresh = () => {
-    console.log("refreshing");
-    setIsLoad((isLoad) => {
-      return isLoad + 1;
-    });
-  };
 
   //   console.log("tweets", tweets);
   return (

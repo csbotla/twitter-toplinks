@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./header";
 import TweetsContainer from "./TweetsContainer";
-import ListofMostpopulardomain from "./listofmostpopulardomain";
-import Mostpopulardomain from "./mostpopulardomain";
 
 function Home() {
   const [user, setUser] = useState({
@@ -14,11 +12,10 @@ function Home() {
   const handleNotAuthenticated = () => {
     setUser({ authenticated: false });
   };
-  const [checkTweets, setUsername] = useState("");
-
+  // const [username, setUsername] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/auth/login/success", {
+    fetch(process.env.BACKEND_URL + "/auth/login/success", {
       method: "GET",
       credentials: "include",
       headers: {
@@ -40,7 +37,7 @@ function Home() {
           responseJson.user,
           responseJson.user.photos[0].value
         );
-        setUsername(responseJson.user.displayName);
+        // setUsername(responseJson.user.displayName);
         const newuser = {
           authenticated: true,
           userInfo: responseJson.user,
