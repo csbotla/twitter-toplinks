@@ -8,6 +8,7 @@
     "start":"node index.js",
     "server":"nodemon index.js",
     "client":"npm start --prefix frontend/twitter-toplinks",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/twitter-toplinks && npm run build --prefix frontend/twitter-toplinks"
   },
   "author": "Chandra Shekhar",
