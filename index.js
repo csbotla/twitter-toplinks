@@ -182,7 +182,7 @@ app.get(
 
 app.get("/logout", function (req, res) {
   req.session.destroy(function (err) {
-    res.redirect("http://localhost:3006"); //Inside a callback… bulletproof!
+    res.redirect(CLIENT_URL); //Inside a callback… bulletproof!
   });
 });
 
