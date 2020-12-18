@@ -5,3 +5,4 @@ controller/*
 routes
 routes/*
 query.txt
+.env
