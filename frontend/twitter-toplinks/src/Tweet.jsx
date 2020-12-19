@@ -13,12 +13,14 @@ function Tweet({ tweet }) {
         </span>
         <span className="username">@{tweet.screen_name}</span>
 
-        <div className="text">{tweet.text}</div>
-        <a href={tweet.expanded_url} target="_blank">
-          {tweet.expanded_url.length > 100
-            ? tweet.expanded_url.substring(0, 100 - 3) + "..."
-            : tweet.expanded_url}
-        </a>
+        <div className="text">
+          <p>{tweet.text}</p>
+          <a href={tweet.expanded_url} target="_blank">
+            {tweet.expanded_url.length > 60
+              ? tweet.expanded_url.substring(0, 60 - 3) + "..."
+              : tweet.expanded_url}
+          </a>
+        </div>
         <div className="">{tweet.tweet_time}</div>
       </div>
     </div>

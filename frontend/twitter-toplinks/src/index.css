@@ -252,12 +252,26 @@ img {
   display: inline;
   height: 48px;
   width: 48px;
-  margin-right: 10px;
 }
 
 .img-container {
-  flex: 0.4;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.text-container{
+  min-width: 400px;
+  margin-right: 10px;
+}
+
+.text a{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 .containers {
   display: flex;
