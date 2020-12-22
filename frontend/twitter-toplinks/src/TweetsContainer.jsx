@@ -48,7 +48,7 @@ function TweetsContainer() {
           var img_url = url.replace("_normal", "");
           const newtweet = {
             tweet_time: tweet.created_at,
-            text: tweet.text,
+            text: tweet.full_text,
             retweet_count: tweet.retweet_count,
             from: tweet.user.name,
             screen_name: tweet.user.screen_name,
