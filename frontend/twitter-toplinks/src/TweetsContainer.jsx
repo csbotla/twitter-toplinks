@@ -44,7 +44,7 @@ function TweetsContainer() {
         responseJson.map((tweet) => {
           // console.log("Tweet--0000", tweet);
           // console.log("Tweet--0000", tweet.entities.urls[0].expanded_url);
-          var url = tweet.user.profile_image_url;
+          var url = tweet.user.profile_image_url_https;
           var img_url = url.replace("_normal", "");
           const newtweet = {
             tweet_time: tweet.created_at,
